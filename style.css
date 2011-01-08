@@ -1,0 +1,96 @@
+/*
+Theme Name: Manifesto
+Theme URI: http://rudyjahchan.com/projects/manifesto
+Description: A minimalist theme, with just a few bells and whistles
+Author: Rudy Jahchan
+Version: 1.0 
+Tags: black, white,one-column, fixed-width, custom-header, custom-background, threaded-comments, microformats, rtl-language-support, editor-style, custom-menu (optional)
+
+License:
+License URI:
+
+General comments (optional).
+*/
+html {background: #000;}
+
+body{
+  background: #000;
+  font: 62.5% palatino, "times new roman", serif;
+  color: #ccc;
+}
+
+a:link,
+a:visited{
+  color: #ccc;
+  text-decoration: none;
+}
+a:hover,
+a:active{
+  color: #ccc;
+  text-decoration: underline;
+}
+
+header {
+	display:block;
+	height: 240px;
+	background: url(images/RudyJahchanBG.png) right bottom no-repeat;
+	padding-right: 250px;
+}
+
+h1 {
+  margin: 10px 0 20px;
+  font-size: 3.3em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  word-spacing: .2em;
+  text-align: center;
+}
+
+h1 a:link,
+h1 a:visited{
+  color: #fff;
+}
+
+h1 a:hover,
+h1 a:active{
+  color: #fff;
+  text-decoration: underline;
+}
+
+#description {
+	padding: 1em;
+	font-style: italic;
+	font-size: 1.3em;
+  margin: 10px 50px;
+  line-height: 2.0em;
+  color:#888;
+}
+#description:before{
+	content:"{";
+	margin-left: -1em;
+	float: left;
+}
+#description:after {
+	content:"}";
+	margin-right: -1em;
+	float: right;
+} 
+
+
+#page {
+	width:750px;
+	margin: 0 auto;
+}
+
+/* new clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
