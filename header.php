@@ -49,5 +49,22 @@
 <p id="description">
 Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winning web shows <a href="http://galacticast.com">GALACTICAST</a> &amp; <a href="">A Comicbook Orange</a> ; Agile codemonkey under the professional auspices of <a href="http://carbonfive.com">Carbon Five</a> ; Crafter of fine WordPress video plugins <a href="http://vlogmonkey.org">VlogMonkey</a> &amp; theme <a href="http://vlogmonkey.org/ufosplode">UFO 'Splode</a> ; Found on <a href="http://twitter.com/rudy">Twitter</a> &amp; <a href="http://facebook.com/rudyjahchan">Facebook</a>.</p>
 </header>
-<nav>
+<div class="clearfix">
+<div id="main">
+<nav id="site">
+	<ul>
+  	<?php wp_list_pages('title_li=&depth=1'); ?>
+  </ul>
 </nav>
+<?php
+	if($post->post_parent)
+	$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+	else
+	$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+	if ($children) { ?>
+	<nav id="sub_pages">
+	<ul>
+	<?php echo $children; ?>
+	</ul>
+	</nav>
+<?php } ?>
