@@ -30,6 +30,11 @@ a:active{
   text-decoration: underline;
 }
 
+#page {
+	width:750px;
+	margin: 0 auto;
+}
+
 header {
 	display:block;
 	height: 240px;
@@ -57,6 +62,25 @@ h1 a:hover,
 h1 a:active{
   color: #fff;
   text-decoration: underline;
+}
+
+h5{
+  margin-bottom: 50px;
+  font-family: "helvetica neue", helvetica, arial;
+  font-size: 1.2em;
+  color: #888;
+  font-weight: normal;
+  border-bottom: 1px solid #444;
+  background: #000;
+  text-align: center;
+}
+h5 abbr{
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 8px;
+  background: #000;
+  top: 8px;
 }
 
 #description {
@@ -176,9 +200,9 @@ nav#sub_pages .current_page_item a:active{
   color: #ccc;
 }
 
-#page {
-	width:750px;
-	margin: 0 auto;
+article {
+	display: block;
+	margin-top: 50px;
 }
 
 /* new clearfix */
