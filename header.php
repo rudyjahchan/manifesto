@@ -62,9 +62,11 @@ Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winn
 	else
 	$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
 	if ($children) { ?>
-	<nav id="sub_pages">
+	<nav id="sub-pages">
 	<ul>
 	<?php echo $children; ?>
 	</ul>
 	</nav>
 <?php } ?>
+
+<div class="hfeed">
