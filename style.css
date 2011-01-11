@@ -583,6 +583,14 @@ nav.pages .nav-next{
   float: right;
 }
 
+/* Single */
+
+.single .hfeed .entry-utility {
+  margin: 20px 0 0;
+  padding-top: 0;
+  padding-bottom: 17px;
+}
+
 /* new clearfix */
 .clearfix:after {
 	visibility: hidden;
