@@ -10,7 +10,12 @@
 			?>
 			<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			<h4 class="vcard author">by <span class="fn"><?php the_author(); ?></span></h4>
-
+			
+			<?php 
+				if (has_post_thumbnail()) {
+					the_post_thumbnail( 'feature_image_size' ); 
+				}
+			?>
 			<div class="entry-content">				
 				<?php the_content('Read the rest of this entry &raquo;'); ?>
 			</div>
