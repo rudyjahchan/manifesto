@@ -40,7 +40,6 @@ header {
 	height: 240px;
 	background: url(images/RudyJahchanBG.png) right bottom no-repeat;
 	padding-right: 250px;
-  border-bottom: 1px solid #fff;
 }
 
 h1 {
@@ -50,6 +49,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: .05em;
   word-spacing: .2em;
+  text-align: center;
 }
 
 h1 a:link,
@@ -131,6 +131,7 @@ h5 abbr{
 nav#site {
 	display: block;
   padding: 5px;
+  border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
 
@@ -251,12 +252,230 @@ nav#sub-pages .current-page-item a:active{
   color: #888;
 }
 
+.hfeed .entry-utility span{
+  text-transform: uppercase;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6{
+  color: #333;
+  border: none;
+  padding: 0;
+  font-family: constantia, palatino, times new roman;
+  font-weight: bold;
+  margin: 0 0 5px;
+  font-style: normal;
+  position: static;
+}
+
+.entry-content h1{
+  font-size: 2em;
+  letter-spacing: 0;
+}
+.entry-content h2{
+  font-size: 1.8em;
+}
+.entry-content h3{
+  font-size: 1.6em;
+}
+.entry-content h4,
+.entry-content h5,
+.entry-content h6{
+  font-size: 1.4em;
+}
+.entry-content strong{
+  color: #000;
+}
+.entry-content pre{
+  color: #666;
+  font-size: 1.5em;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+.entry-content ul,
+.entry-content ol{
+  margin: 0 0 20px 15px;
+}
+.entry-content ol li{
+  list-style-type: decimal !important;
+}
+.entry-content li{
+  margin-bottom: 5px !important;
+}
+.entry-content blockquote{
+  font-size: 1.4em;
+  font-style: italic;
+  line-height: 1.5em;
+  color: #7D7D7D;
+  margin: 0 20px 20px;
+  padding-left: 10px;
+  border-left: 3px solid #ccc;
+}
+
+.entry-content blockquote p{
+  font-size: 1.1em;
+  line-height: 1.3em;
+  color: #7D7D7D;
+}
+.entry-content .alignleft{
+  float: left;
+  margin: 4px 10px 10px 0;
+}
+.entry-content .alignright{
+  float: right;
+  margin: 4px 0 10px 10px;
+}
+.entry-content .wp-caption.alignnone{
+  margin-bottom: 15px;
+}
+
+.entry-content p.wp-caption-text{
+  font-size: 1.1em;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0;
+}
+.hentry img{
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
 article {
 	display: block;
 	margin-bottom: 50px;
   padding-bottom: 37px;
   border-bottom: 1px dotted #444;
   margin-bottom: 30px;
+}
+
+/* Comments
+-------------------------------------------------------------------*/
+
+.comment{
+  padding: 0 0 25px 0;
+  margin-top: 25px;
+  border-bottom: 1px solid #ccc;
+}
+.children .comment{
+  border-bottom: none;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+.hfeed #comments li{
+  font-size: inherit;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 58px;
+  position: relative;
+}
+.hfeed .comment p{
+  color: #aaa;
+}
+.hfeed .comment .says{
+  display: none;
+}
+.avatar{
+  position: absolute;
+  left: 0;
+}
+.hfeed .comment-body{
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.hfeed #comments .comment .leaveComment{
+  border-top: 1px dotted #555;
+}
+.hfeed #comments .comment .children li{
+  padding: 10px 0 0 52px;
+  margin: 5px 0 0;
+}
+.hfeed #comments .comment .children li .comment-body{
+  margin-left: -52px;
+  padding: 10px 10px 10px 52px;
+  background: #111;
+  border-left: 2px solid #555;
+}
+.hfeed #comments .comment .children li #respond{
+  background: #111 url(images/commentReply.gif) no-repeat;
+}
+.hfeed #comments .comment .children li .leaveComment{
+  
+  background: url(images/commentBottom.png) repeat-x left bottom;
+}
+.hfeed #comments .comment .children li.depth-3 .comment-body{
+  background-color: #111;
+  border-left: 2px solid #555;
+}
+.hfeed #comments .comment .children li.depth-3 #respond{
+  background-color: #111;
+}
+.hfeed #comments .comment .children li.depth-4 .comment-body{
+  background-color: #111;
+  border-left: 2px solid #555;
+}
+.hfeed #comments .comment .children li.depth-4 #respond{
+  background-color: #111;
+}
+.hfeed #comments .comment .children li.depth-5 .comment-body{
+  background-color: #111;
+}
+.hfeed #comments .comment .children li.depth-5 #respond{
+  background-color: #111;
+}
+.hfeed #comments .comment .children li .avatar{
+  left: 10px;
+  width: 32px;
+  height: 32px;
+  
+}
+#cancel-comment-reply{
+  margin-top: 15px;
+  text-transform: capitalize;
+  float: left;
+}
+.comment-reply-link{
+  display: block;
+  padding-left: 13px;
+  background: url(images/icon_reply.png) no-repeat left 2px;
+}
+.comment-author{
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.comment-author cite{
+  font-style: normal;
+  font-weight: bold;
+}
+.comment-meta{
+  position: absolute;
+  right: 10px;
+  font-size: 1.2em;
+  font-style: italic;
+  top: 0px;
+  
+}
+.hfeed #comments .comment .children .comment-meta{
+  top: 20px;
+}
+.comment .reply{
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.commentContent{
+  float: left;
+  width: 415px;
+  margin-left: 22px;
+}
+.nocomments{
+  font-size: 1.2em;
+  padding: 25px 0;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
 }
 
 /* new clearfix */
