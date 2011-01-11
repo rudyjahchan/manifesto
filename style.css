@@ -126,6 +126,12 @@ h5 abbr{
 	display: block;
 	width: 500px;
 	float: left;
+}
+
+#sidebar {
+	display: block;
+	width: 240px;
+	float: right;
 } 
 
 nav#site {
@@ -589,6 +595,38 @@ nav.pages .nav-next{
   margin: 20px 0 0;
   padding-top: 0;
   padding-bottom: 17px;
+}
+
+/* Footer */
+footer {
+display: block;
+width: 500px;
+}
+
+/* Widgets */
+
+.widget-container {
+	margin-bottom: 10px;
+}
+
+.footer-left-widget-area {
+	display: block;
+	width: 245px;
+	float: left;
+}
+
+.footer-right-widget-area {
+	display: block;
+	width: 245px;
+	float: right;
+}
+
+.widget-container h3 {
+	display: block;
+  padding: 5px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 1.5em;
 }
 
 /* new clearfix */
