@@ -20,7 +20,7 @@
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
+		echo ' | ' . sprintf( __( 'Page %s', 'manity' ), max( $paged, $page ) );
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -62,9 +62,11 @@ Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winn
 	else
 	$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
 	if ($children) { ?>
-	<nav id="sub_pages">
+	<nav id="sub-pages">
 	<ul>
 	<?php echo $children; ?>
 	</ul>
 	</nav>
 <?php } ?>
+
+<div class="hfeed">

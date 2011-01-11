@@ -16,7 +16,7 @@ html {background: #000;}
 body{
   background: #000;
   font: 62.5% palatino, "times new roman", serif;
-  color: #ccc;
+  color: #888;
 }
 
 a:link,
@@ -30,12 +30,16 @@ a:active{
   text-decoration: underline;
 }
 
+#page {
+	width:750px;
+	margin: 0 auto;
+}
+
 header {
 	display:block;
 	height: 240px;
 	background: url(images/RudyJahchanBG.png) right bottom no-repeat;
 	padding-right: 250px;
-  border-bottom: 1px solid #fff;
 }
 
 h1 {
@@ -57,6 +61,45 @@ h1 a:hover,
 h1 a:active{
   color: #fff;
   text-decoration: underline;
+}
+
+h3{
+  margin-bottom: 5px;
+  font-size: 2.3em;
+  font-weight: normal;
+}
+h3 a:link{
+  color: #ccc;
+}
+h3 a:hover,
+h3 a:active,
+h3 a:visited{
+  text-decoration: underline;
+}
+
+h4{
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ccc;
+}
+
+h5{
+  margin-bottom: 50px;
+  font-family: "helvetica neue", helvetica, arial;
+  font-size: 1.2em;
+  color: #888;
+  font-weight: normal;
+  border-bottom: 1px solid #444;
+  background: #000;
+}
+h5 abbr{
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 8px;
+  background: #000;
+  top: 8px;
 }
 
 #description {
@@ -88,6 +131,7 @@ h1 a:active{
 nav#site {
 	display: block;
   padding: 5px;
+  border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
 
@@ -111,7 +155,7 @@ nav#site li:last-child{
 nav#site a:link,
 nav#site a:visited{
   color: #ddd;
-  white-space: nowrap;
+  whi	te-space: nowrap;
 }
 
 nav#site a:hover,
@@ -119,66 +163,424 @@ nav#site a:active{
   color: #ddd;
 }
 
-nav#site .current_page_parent a:link,
-nav#site .current_page_parent a:visited,
-nav#site .current_page_item a:link,
-nav#site .current_page_item a:visited{
+nav#site .current-page-parent a:link,
+nav#site .current-page-parent a:visited,
+nav#site .current-page-item a:link,
+nav#site .current-page-item a:visited{
   text-decoration: underline;
   color: #eee;
 }
 
-nav#site .current_page_parent a:hover,
-nav#site .current_page_parent a:active,
-nav#site .current_page_item a:hover,
-nav#site .current_page_item a:active{
+nav#site .current-page-parent a:hover,
+nav#site .current-page-parent a:active,
+nav#site .current-page-item a:hover,
+nav#site .current-page-item a:active{
   color: #fff;
 }
 
-nav#sub_pages{
+nav#sub-pages{
 	display: block;
   padding: 5px;
   border-bottom: 1px solid #F4F4F4;
 }
-nav#sub_pages ul{
+nav#sub-pages ul{
   text-align: center;
 }
-nav#sub_pages li{
+nav#sub-pages li{
   display: inline;
   margin-right: 20px;
   font-size: 1.2em;
   text-transform: uppercase;
   line-height: 1.2em;
 }
-nav#sub_pages li:last-child{
+nav#sub-pages li:last-child{
   margin-right: 0;
 }
-nav#sub_pages a:link,
-nav#sub_pages a:visited{
+nav#sub-pages a:link,
+nav#sub-pages a:visited{
   color: #999;
   white-space: nowrap;
 }
-nav#sub_pages a:hover,
-nav#sub_pages a:active{
+nav#sub-pages a:hover,
+nav#sub-pages a:active{
   text-decoration: underline;
   color: #bbb;
 }
-nav#sub_pages .current_page_parent a:link,
-nav#sub_pages .current_page_parent a:visited,
-nav#sub_pages .current_page_item a:link,
-nav#sub_pages .current_page_item a:visited{
+nav#sub-pages .current-page-parent a:link,
+nav#sub-pages .current-page-parent a:visited,
+nav#sub-pages .current-page-item a:link,
+nav#sub-pages .current-page-item a:visited{
   text-decoration: underline;
   color: #ccc;
 }
-nav#sub_pages .current_page_parent a:hover,
-nav#sub_pages .current_page_parent a:active,
-nav#sub_pages .current_page_item a:hover,
-nav#sub_pages .current_page_item a:active{
+nav#sub-pages .current-page-parent a:hover,
+nav#sub-pages .current-page-parent a:active,
+nav#sub-pages .current-page-item a:hover,
+nav#sub-pages .current-page-item a:active{
   color: #ccc;
 }
 
-#page {
-	width:750px;
-	margin: 0 auto;
+.hfeed {
+	margin-top: 50px;
+  text-align: center;
+}
+
+.hfeed p,
+.hfeed li,
+.hfeed dd{
+  margin-bottom: 1.7em;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  color: #888;
+  text-align: justify;
+}
+.hfeed p{
+  text-align: justify;
+}
+.hfeed li{
+  list-style: square;
+  margin-left: 17px;
+}
+.hfeed dt{
+  font-size: 1.3em;
+  color: #333;
+}
+
+.hfeed .entry-utility {
+  margin: 40px auto 0;
+  font-size: 1.3em;
+  color: #888;
+}
+
+.hfeed .entry-utility span{
+  text-transform: uppercase;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6{
+  color: #333;
+  border: none;
+  padding: 0;
+  font-family: constantia, palatino, times new roman;
+  font-weight: bold;
+  margin: 0 0 5px;
+  font-style: normal;
+  position: static;
+}
+
+.entry-content h1{
+  font-size: 2em;
+  letter-spacing: 0;
+}
+.entry-content h2{
+  font-size: 1.8em;
+}
+.entry-content h3{
+  font-size: 1.6em;
+}
+.entry-content h4,
+.entry-content h5,
+.entry-content h6{
+  font-size: 1.4em;
+}
+.entry-content strong{
+  color: #000;
+}
+.entry-content pre{
+  color: #666;
+  font-size: 1.5em;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+.entry-content ul,
+.entry-content ol{
+  margin: 0 0 20px 15px;
+}
+.entry-content ol li{
+  list-style-type: decimal !important;
+}
+.entry-content li{
+  margin-bottom: 5px !important;
+}
+.entry-content blockquote{
+  font-size: 1.4em;
+  font-style: italic;
+  line-height: 1.5em;
+  color: #7D7D7D;
+  margin: 0 20px 20px;
+  padding-left: 10px;
+  border-left: 3px solid #ccc;
+}
+
+.entry-content blockquote p{
+  font-size: 1.1em;
+  line-height: 1.3em;
+  color: #7D7D7D;
+}
+.entry-content .alignleft{
+  float: left;
+  margin: 4px 10px 10px 0;
+}
+.entry-content .alignright{
+  float: right;
+  margin: 4px 0 10px 10px;
+}
+.entry-content .wp-caption.alignnone{
+  margin-bottom: 15px;
+}
+
+.entry-content p.wp-caption-text{
+  font-size: 1.1em;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0;
+}
+.hentry img{
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+article {
+	display: block;
+	margin-bottom: 50px;
+  padding-bottom: 37px;
+  border-bottom: 1px dotted #444;
+  margin-bottom: 30px;
+}
+
+/* Comments
+-------------------------------------------------------------------*/
+
+.comment{
+  padding: 0 0 25px 0;
+  margin-top: 25px;
+  border-bottom: 1px solid #ccc;
+}
+.children .comment{
+  border-bottom: none;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+.hfeed #comments li{
+  font-size: inherit;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 58px;
+  position: relative;
+}
+.hfeed .comment p{
+  color: #aaa;
+}
+.hfeed .comment .says{
+  display: none;
+}
+.avatar{
+  position: absolute;
+  left: 0;
+}
+.hfeed .comment-body{
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.hfeed #comments .comment .leaveComment{
+  border-top: 1px dotted #555;
+}
+.hfeed #comments .comment .children li{
+  padding: 10px 0 0 52px;
+  margin: 5px 0 0;
+}
+.hfeed #comments .comment .children li .comment-body{
+  margin-left: -52px;
+  padding: 10px 10px 10px 52px;
+  background: #111;
+  border-left: 2px solid #555;
+}
+.hfeed #comments .comment .children li #respond{
+  background: #111 url(images/commentReply.gif) no-repeat;
+}
+.hfeed #comments .comment .children li .leaveComment{
+  
+  background: url(images/commentBottom.png) repeat-x left bottom;
+}
+.hfeed #comments .comment .children li.depth-3 .comment-body{
+  background-color: #111;
+  border-left: 2px solid #555;
+}
+.hfeed #comments .comment .children li.depth-3 #respond{
+  background-color: #111;
+}
+.hfeed #comments .comment .children li.depth-4 .comment-body{
+  background-color: #111;
+  border-left: 2px solid #555;
+}
+.hfeed #comments .comment .children li.depth-4 #respond{
+  background-color: #111;
+}
+.hfeed #comments .comment .children li.depth-5 .comment-body{
+  background-color: #111;
+}
+.hfeed #comments .comment .children li.depth-5 #respond{
+  background-color: #111;
+}
+.hfeed #comments .comment .children li .avatar{
+  left: 10px;
+  width: 32px;
+  height: 32px;
+  
+}
+#cancel-comment-reply{
+  margin-top: 15px;
+  text-transform: capitalize;
+  float: left;
+}
+.comment-reply-link{
+  display: block;
+  padding-left: 13px;
+  background: url(images/icon_reply.png) no-repeat left 2px;
+}
+.comment-author{
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.comment-author cite{
+  font-style: normal;
+  font-weight: bold;
+}
+.comment-meta{
+  position: absolute;
+  right: 10px;
+  font-size: 1.2em;
+  font-style: italic;
+  top: 0px;
+  
+}
+.hfeed #comments .comment .children .comment-meta{
+  top: 20px;
+}
+.comment .reply{
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+.nocomments{
+  font-size: 1.2em;
+  padding: 25px 0;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+/* Comment Form */
+
+#respond {
+	padding: 0 0 10px;
+}
+
+.comment #respond {
+  padding-right: 10px;
+  padding-left: 54px;
+}
+
+#comments h3{
+  font-size: 1.4em;
+  border-bottom: 1px solid #333;
+  padding: 0 0 .7em;
+  font-weight: bold;
+  text-align: left;
+}
+
+#respond fieldset {
+	display: block;
+	float: left;
+	width: 230px;
+}
+
+.comment #respond fieldset,
+.logged-in #respond fieldset {
+	float: none;
+	width: 100%;
+}
+
+#respond #commentform {
+	text-align: left;
+}
+
+#respond #commentform label {
+	font-size: 1.1em;
+	text-transform: uppercase;
+}
+
+#respond #commentform em{
+  text-transform: lowercase;
+  font-style: italic;
+  color: #666;
+  font-size: 1em;
+}
+
+#respond label.comment-form-comment {
+	display: block;
+	float: right;
+	width: 250px;
+}
+
+.comment #respond label.comment-form-comment,
+.logged-in #respond label.comment-form-comment {
+	float: none;
+	width: 100%;
+}
+
+#commentform input[type=text]{
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+#commentform textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 121px;
+  font-size: 1.2em;
+}
+
+.logged-in #commentform textarea {
+  max-width: 100%;
+  height: 124px;
+}
+
+#comments input[type=submit]{
+  float: right;
+  margin-top: 8px;
+}
+
+.comment #respond {
+	margin-left: -52px;
+}
+
+/* Paging Navigation
+-------------------------------------------------------------------- */
+
+nav.pages {
+	display: block;
+  margin-top: 40px;
+}
+nav.pages a:link,
+nav.pages a:visited {
+  font-size: 1.5em;
+}
+nav.pages .nav-previous,
+nav.pages.nav-next{
+  display: block;
+}
+nav.pages .nav-previous{
+  float: left;
+}
+nav.pages .nav-next{
+  float: right;
 }
 
 /* new clearfix */
