@@ -466,16 +466,121 @@ article {
   text-transform: uppercase;
   font-size: 1.1em;
 }
-.commentContent{
-  float: left;
-  width: 415px;
-  margin-left: 22px;
-}
+
 .nocomments{
   font-size: 1.2em;
   padding: 25px 0;
   border-top: 1px solid #555;
   border-bottom: 1px solid #555;
+}
+
+/* Comment Form */
+
+#respond {
+	padding: 0 0 10px;
+}
+
+.comment #respond {
+  padding-right: 10px;
+  padding-left: 54px;
+}
+
+#comments h3{
+  font-size: 1.4em;
+  border-bottom: 1px solid #333;
+  padding: 0 0 .7em;
+  font-weight: bold;
+  text-align: left;
+}
+
+#respond fieldset {
+	display: block;
+	float: left;
+	width: 230px;
+}
+
+.comment #respond fieldset,
+.logged-in #respond fieldset {
+	float: none;
+	width: 100%;
+}
+
+#respond #commentform {
+	text-align: left;
+}
+
+#respond #commentform label {
+	font-size: 1.1em;
+	text-transform: uppercase;
+}
+
+#respond #commentform em{
+  text-transform: lowercase;
+  font-style: italic;
+  color: #666;
+  font-size: 1em;
+}
+
+#respond label.comment-form-comment {
+	display: block;
+	float: right;
+	width: 250px;
+}
+
+.comment #respond label.comment-form-comment,
+.logged-in #respond label.comment-form-comment {
+	float: none;
+	width: 100%;
+}
+
+#commentform input[type=text]{
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+#commentform textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 121px;
+  font-size: 1.2em;
+}
+
+.logged-in #commentform textarea {
+  max-width: 100%;
+  height: 124px;
+}
+
+#comments input[type=submit]{
+  float: right;
+  margin-top: 8px;
+}
+
+.comment #respond {
+	margin-left: -52px;
+}
+
+/* Paging Navigation
+-------------------------------------------------------------------- */
+
+nav.pages {
+	display: block;
+  margin-top: 40px;
+}
+nav.pages a:link,
+nav.pages a:visited {
+  font-size: 1.5em;
+}
+nav.pages .nav-previous,
+nav.pages.nav-next{
+  display: block;
+}
+nav.pages .nav-previous{
+  float: left;
+}
+nav.pages .nav-next{
+  float: right;
 }
 
 /* new clearfix */
