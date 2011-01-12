@@ -599,14 +599,20 @@ nav.pages .nav-next{
 
 /* Footer */
 footer {
+margin-top: 50px;
 display: block;
 width: 500px;
+border-top: 1px solid #fff;
+}
+
+.cclicense {
+text-align: center;
 }
 
 /* Widgets */
 
 .widget-container {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .footer-left-widget-area {
@@ -627,6 +633,51 @@ width: 500px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   font-size: 1.5em;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+.footer-widget-area .widget-container:first-child h3 {
+	border-top: none;
+}
+
+.widget-container h3 a:hover,
+.widget-container h3 a:active,
+.widget-container h3 a,
+.widget-container h3 a:visited {
+	text-decoration: none;	
+}
+
+.widget-container ul {
+	font-size: 1.5em;
+}
+
+.widget-container div {
+	font-size: 1.3em;
+	line-height: 1.4em;
+	padding: 5px;
+}
+
+.widget-container ul li {
+	line-height: 1.4em;
+	border-bottom: 1px dotted #444;
+	padding: 5px;
+}
+
+/* Search Form */
+
+#searchform input[type=text]{
+  font-size: 1.4em;
+  border-color: #ccc;
+  padding: 2px;
+}
+
+#searchform input[type=submit] {
+  font-size: 1.4em;
+}
+
+#searchform input[type=text]:focus{
+  border-color: #999;
 }
 
 /* new clearfix */
