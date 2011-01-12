@@ -664,6 +664,18 @@ text-align: center;
 	padding: 5px;
 }
 
+.widget-container ul ul {font-size: 1.0em;}
+.widget-container ul li li {border-bottom: none;padding: 0 0 0 1em;}
+
+.widget-container select {
+	width: 99%;
+	font-size: 1.3em;
+	line-height: 1.4em;
+}
+
+.widget-container select option {
+}
+
 .widget-container #calendar_wrap table {width: 100%;}
 .widget-container #calendar_wrap table caption {text-align: center;}
 
