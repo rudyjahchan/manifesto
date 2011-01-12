@@ -664,6 +664,9 @@ text-align: center;
 	padding: 5px;
 }
 
+.widget-container #calendar_wrap table {width: 100%;}
+.widget-container #calendar_wrap table caption {text-align: center;}
+
 /* Search Form */
 
 #searchform input[type=text]{
