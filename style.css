@@ -130,7 +130,7 @@ h5 abbr{
 
 #sidebar {
 	display: block;
-	width: 240px;
+	width: 225px;
 	float: right;
 } 
 
@@ -627,9 +627,10 @@ text-align: center;
   padding: 5px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #ccc;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .footer-widget-area .widget-container:first-child h3 {
@@ -672,7 +673,17 @@ text-align: center;
 
 .widget-container #calendar_wrap table {width: 100%;}
 .widget-container #calendar_wrap table caption {text-align: center;}
-
+.widget-container #calendar_wrap table tbody td,
+.widget-container #calendar_wrap table thead th {
+	padding: 5px;
+	text-align: center;
+}
+.widget-container #calendar_wrap table thead {
+	border-bottom: 1px solid #bbb;
+}
+.widget-container #calendar_wrap table th {
+	color: #bbb;
+}
 /* Search Form */
 
 #searchform input[type=text]{
