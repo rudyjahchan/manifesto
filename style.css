@@ -169,18 +169,20 @@ nav#site a:active{
   color: #ddd;
 }
 
-nav#site .current-page-parent a:link,
-nav#site .current-page-parent a:visited,
-nav#site .current-page-item a:link,
-nav#site .current-page-item a:visited{
+nav#site .current_page_parent a:link,
+nav#site .current_page_parent a:visited,
+nav#site .current_page_item a:link,
+nav#site .current_page_item a:visited{
   text-decoration: underline;
   color: #eee;
 }
 
-nav#site .current-page-parent a:hover,
-nav#site .current-page-parent a:active,
-nav#site .current-page-item a:hover,
-nav#site .current-page-item a:active{
+nav#site .current_page_parent a:hover,
+nav#site .current_page_parent a:active,
+nav#site .current-page-ancestor a:hover,
+nav#site .current-page-ancestor a:active,
+nav#site .current_page_item a:hover,
+nav#site .current_page_item a:active{
   color: #fff;
 }
 
@@ -212,17 +214,17 @@ nav#sub-pages a:active{
   text-decoration: underline;
   color: #bbb;
 }
-nav#sub-pages .current-page-parent a:link,
-nav#sub-pages .current-page-parent a:visited,
-nav#sub-pages .current-page-item a:link,
-nav#sub-pages .current-page-item a:visited{
+nav#sub-pages .current-page-ancestor a:link,
+nav#sub-pages .current-page-ancestor a:visited,
+nav#sub-pages .current_page_item a:link,
+nav#sub-pages .current_page_item a:visited{
   text-decoration: underline;
   color: #ccc;
 }
-nav#sub-pages .current-page-parent a:hover,
-nav#sub-pages .current-page-parent a:active,
-nav#sub-pages .current-page-item a:hover,
-nav#sub-pages .current-page-item a:active{
+nav#sub-pages .current-page-ancestor a:hover,
+nav#sub-pages .current-page-ancestor a:active,
+nav#sub-pages .current_page_item a:hover,
+nav#sub-pages .current_page_item a:active{
   color: #ccc;
 }
 
