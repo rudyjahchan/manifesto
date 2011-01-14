@@ -1,17 +1,21 @@
-<?php if (have_posts()) : ?>
+<?php if (have_posts()) { 
 
-	<?php while (have_posts()) : the_post(); ?>
+		while (have_posts()) { 
+			the_post(); 
+		
+			$date_header = !is_single() && !is_page() && !is_archive() && !is_search() && !is_404();
+		?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php 
-				if (!is_single() && !is_page()) {
+				if ($date_header) {
 					the_date('F j, Y', '<h5 class="entry-date"><abbr class="published">','</abbr></h5>');
 				}
 			?>
 			<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			<h4 class="vcard author">by <span class="fn"><?php the_author(); ?></span></h4>
 			
-			<?php if ( is_archive() || is_search() ) { // Only display excerpts for archives and search. ?>
+			<?php if ( is_archive() || is_search() || is_404()) { // Only display excerpts for archives and search. ?>
 				<div class="entry-summary">
 				<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
 				</div><!-- .entry-summary -->
@@ -27,11 +31,14 @@
 				</div>
 			<?php } ?>
 
-			<?php if( !is_single() && !is_page() && !is_archive() && !is_search()) { ?>
-			<div class="entry-utility">
-				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'manifesto' ), __( '1 Comment', 'manifesto' ), __( '% Comments', 'manifesto' ) ); ?></span>
-				<?php edit_post_link( __( 'Edit', 'manifesto' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>			
-			</div>
+			<?php if($date_header) { ?>
+				<div class="entry-utility">
+					<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'manifesto' ), __( '1 Comment', 'manifesto' ), __( '% Comments', 'manifesto' ) ); ?></span>
+          <span class="meta-sep">|</span> 
+        	<span class="categories">Filed Under:</span> <?php the_category(', '); ?></span>
+        	<?php the_tags('<span class="meta-sep">|</span> <span>Tags: ', ' : ', '</span>'); ?>
+					<?php edit_post_link( __( 'Edit', 'manifesto' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>			
+				</div>
 			<?php } else { ?>
 				<div class="entry-utility">
           <?php
@@ -51,7 +58,11 @@
       <?php } ?>
 			
 
-			<?php comments_template(); ?>
+			<?php 
+				if (!is_page() || comments_open() ) {
+					comments_template(); 
+				}
+			?>
 			
 			<?php if(is_single() && !is_page()) { ?>
 				<nav class="pages clearfix">
@@ -62,7 +73,7 @@
 
 		</article>
 
-	<?php endwhile; ?>
+	<?php } ?>
 	
 	<?php if (  $wp_query->max_num_pages > 1 ) : ?>
 				<nav class="pages clearfix">
@@ -71,4 +82,6 @@
 				</nav>
 <?php endif; ?>
 
-<?php endif; ?>
+<?php } else { ?>
+
+<?php } ?>
