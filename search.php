@@ -6,7 +6,7 @@
 
 <?php
 
-get_template_part( 'loop', 'index' );
+get_template_part( 'loop', 'search' );
 
 ?>
 

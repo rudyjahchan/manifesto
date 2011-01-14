@@ -62,20 +62,26 @@ Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winn
 		} else {
 			wp_list_pages("title_li=&depth=1");
 		}
-	?>
+	?>	
 	</ul>
 </nav>
 <?php
-	if($post->post_parent)
-	$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-	else
-	$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
-	if ($children) { ?>
-	<nav id="sub-pages">
-	<ul>
-	<?php echo $children; ?>
-	</ul>
-	</nav>
-<?php } ?>
+	if(is_page()) {
+		if($post->post_parent) {
+			$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+		} else {
+			$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+		}
+		
+		if ($children) { ?>
+			<nav id="sub-pages">
+			<ul>
+			<?php echo $children; ?>
+			</ul>
+			</nav>
+<?php 
+		}
+	}
+?>
 
 <div class="hfeed">
