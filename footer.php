@@ -5,14 +5,21 @@
 	?>
 </div>
 <footer>
-<div class="clearfix">
-	<ul class="footer-left-widget-area footer-widget-area">
-	<?php dynamic_sidebar( 'footer-left-widget-area' ); ?>
+
+<nav id="site">
+	<ul>
+	<?php 
+		if( has_nav_menu('footer_menu') ) {
+			wp_nav_menu(array(
+			'theme_location' => 'footer_menu',
+			'fallback_cb' => false
+			)); 
+		} else {
+			wp_list_pages("title_li=&depth=1");
+		}
+	?>
 	</ul>
-	<ul class="footer-right-widget-area footer-widget-area">
-	<?php dynamic_sidebar( 'footer-right-widget-area' ); ?>
-	</ul>
-</div>
+</nav>
 
 <?php
 	if (function_exists('bccl_full_html_license')) {

@@ -235,8 +235,8 @@ nav#sub-pages .current-page-item a:active{
 .hfeed li,
 .hfeed dd{
   margin-bottom: 1.7em;
-  font-size: 1.4em;
-  line-height: 1.5em;
+  font-size: 1.5em;
+  line-height: 1.6em;
   color: #888;
   text-align: justify;
 }
@@ -601,30 +601,25 @@ nav.pages .nav-next{
 footer {
 margin-top: 50px;
 display: block;
-width: 500px;
-border-top: 1px solid #fff;
+}
+
+footer nav {
+	margin-bottom: 20px;
 }
 
 .cclicense {
 text-align: center;
 }
 
+.cclicense a {
+	display: block;
+	margin-bottom: 5px;
+}
+
 /* Widgets */
 
 .widget-container {
 	margin-bottom: 20px;
-}
-
-.footer-left-widget-area {
-	display: block;
-	width: 245px;
-	float: left;
-}
-
-.footer-right-widget-area {
-	display: block;
-	width: 245px;
-	float: right;
 }
 
 .widget-container h3 {
@@ -649,12 +644,11 @@ text-align: center;
 }
 
 .widget-container ul {
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 .widget-container div {
-	font-size: 1.3em;
-	line-height: 1.4em;
+	line-height: 1.1em;
 	padding: 5px;
 }
 
