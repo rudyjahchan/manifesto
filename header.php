@@ -53,8 +53,17 @@ Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winn
 <div id="main">
 <nav id="site">
 	<ul>
-  	<?php wp_list_pages('title_li=&depth=1'); ?>
-  </ul>
+	<?php 
+		if( has_nav_menu('header_menu') ) {
+			wp_nav_menu(array(
+			'theme_location' => 'header_menu',
+			'fallback_cb' => false
+			)); 
+		} else {
+			wp_list_pages("title_li=&depth=1");
+		}
+	?>
+	</ul>
 </nav>
 <?php
 	if($post->post_parent)
