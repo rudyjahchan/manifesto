@@ -60,7 +60,7 @@ h1 a:visited{
 h1 a:hover,
 h1 a:active{
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h3{
@@ -130,7 +130,7 @@ h5 abbr{
 
 #sidebar {
 	display: block;
-	width: 240px;
+	width: 225px;
 	float: right;
 } 
 
@@ -627,9 +627,10 @@ text-align: center;
   padding: 5px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #ccc;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .footer-widget-area .widget-container:first-child h3 {
@@ -648,7 +649,8 @@ text-align: center;
 }
 
 .widget-container div {
-	line-height: 1.1em;
+	font-size: 1.3em;
+	line-height: 1.4em;
 	padding: 5px;
 }
 
@@ -672,21 +674,34 @@ text-align: center;
 
 .widget-container #calendar_wrap table {width: 100%;}
 .widget-container #calendar_wrap table caption {text-align: center;}
-
+.widget-container #calendar_wrap table tbody td,
+.widget-container #calendar_wrap table thead th {
+	padding: 5px;
+	text-align: center;
+}
+.widget-container #calendar_wrap table thead {
+	border-bottom: 1px solid #bbb;
+}
+.widget-container #calendar_wrap table th {
+	color: #bbb;
+}
 /* Search Form */
 
-#searchform input[type=text]{
-  font-size: 1.4em;
-  border-color: #ccc;
-  padding: 2px;
+#searchform {
+	text-align: center;
+}
+
+#searchform input[type=text] {
+	width: 100%;
+	display: block;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin-bottom: 5px;
 }
 
 #searchform input[type=submit] {
-  font-size: 1.4em;
-}
-
-#searchform input[type=text]:focus{
-  border-color: #999;
+	font-size: 1.2em;
+	line-height: 1.4em;
 }
 
 /* new clearfix */
