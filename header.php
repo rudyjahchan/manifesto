@@ -49,8 +49,6 @@
 <p id="description">
 Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winning web shows <a href="http://galacticast.com">GALACTICAST</a> &amp; <a href="">A Comicbook Orange</a> ; Agile codemonkey under the professional auspices of <a href="http://carbonfive.com">Carbon Five</a> ; Crafter of fine WordPress video plugins <a href="http://vlogmonkey.org">VlogMonkey</a> &amp; theme <a href="http://vlogmonkey.org/ufosplode">UFO 'Splode</a> ; Found on <a href="http://twitter.com/rudy">Twitter</a> &amp; <a href="http://facebook.com/rudyjahchan">Facebook</a>.</p>
 </header>
-<div class="clearfix">
-<div id="main">
 <nav id="site">
 	<ul>
 	<?php 
@@ -65,6 +63,8 @@ Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winn
 	?>	
 	</ul>
 </nav>
+<div class="clearfix">
+<div id="main">
 <?php
 	if(is_page()) {
 		if($post->post_parent) {
