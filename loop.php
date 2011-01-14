@@ -11,16 +11,23 @@
 			<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			<h4 class="vcard author">by <span class="fn"><?php the_author(); ?></span></h4>
 			
-			<?php 
-				if (has_post_thumbnail()) {
-					the_post_thumbnail( 'feature_image_size' ); 
-				}
-			?>
-			<div class="entry-content">				
-				<?php the_content('Read the rest of this entry &raquo;'); ?>
-			</div>
+			<?php if ( is_archive() || is_search() ) { // Only display excerpts for archives and search. ?>
+				<div class="entry-summary">
+				<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
+				</div><!-- .entry-summary -->
+			<?php } else { ?>
+				<?php 
+					if (has_post_thumbnail()) {
+						the_post_thumbnail( 'feature_image_size' ); 
+					}
+				?>
+			
+				<div class="entry-content">				
+					<?php the_content('Read the rest of this entry &raquo;'); ?>
+				</div>
+			<?php } ?>
 
-			<?php if( !is_single() && !is_page()) { ?>
+			<?php if( !is_single() && !is_page() && !is_archive() && !is_search()) { ?>
 			<div class="entry-utility">
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'manifesto' ), __( '1 Comment', 'manifesto' ), __( '% Comments', 'manifesto' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'manifesto' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>			
