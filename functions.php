@@ -4,6 +4,7 @@ function manifesto_setup() {
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
 	add_image_size('feature_image_size',500,999);
+	register_nav_menus(array('header_menu' => "Header Menu"));
 }
 
 function manifesto_widgets_init() {
