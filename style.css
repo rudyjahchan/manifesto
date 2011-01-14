@@ -60,7 +60,7 @@ h1 a:visited{
 h1 a:hover,
 h1 a:active{
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h3{
@@ -649,7 +649,8 @@ text-align: center;
 }
 
 .widget-container div {
-	line-height: 1.1em;
+	font-size: 1.3em;
+	line-height: 1.4em;
 	padding: 5px;
 }
 
@@ -686,18 +687,21 @@ text-align: center;
 }
 /* Search Form */
 
-#searchform input[type=text]{
-  font-size: 1.4em;
-  border-color: #ccc;
-  padding: 2px;
+#searchform {
+	text-align: center;
+}
+
+#searchform input[type=text] {
+	width: 100%;
+	display: block;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin-bottom: 5px;
 }
 
 #searchform input[type=submit] {
-  font-size: 1.4em;
-}
-
-#searchform input[type=text]:focus{
-  border-color: #999;
+	font-size: 1.2em;
+	line-height: 1.4em;
 }
 
 /* new clearfix */
