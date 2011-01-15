@@ -49,10 +49,16 @@
         
           <span>Published: <abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><a href="<?php echo get_day_link("$arc_year", "$arc_month", 
           "$arc_day"); ?>"><?php the_time('F j, Y'); ?></a></abbr></span>
-          <span class="meta-sep">|</span> 
-        	<span class="categories">Filed Under:</span> <?php the_category(', '); ?></span>
-        	<?php the_tags('<span class="meta-sep">|</span> <span>Tags: ', ' : ', '</span>'); ?>
-        	<?php edit_post_link( __( 'Edit', 'manifesto' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+          <?php
+          if(!is_page()) {
+	          ?>
+	          <span class="meta-sep">|</span> 
+	        	<span class="categories">Filed Under:</span> <?php the_category(', '); ?></span>
+	        	<?php 
+        		the_tags('<span class="meta-sep">|</span> <span>Tags: ', ' : ', '</span>');
+        		edit_post_link( __( 'Edit', 'manifesto' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); 
+        	}	
+        	?>
 
         </div>
       <?php } ?>
