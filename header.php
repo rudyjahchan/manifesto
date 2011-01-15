@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width" />
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -63,8 +64,6 @@ Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winn
 	?>	
 	</ul>
 </nav>
-<div class="clearfix">
-<div id="main">
 <?php
 	if(is_page()) {
 		if($post->post_parent) {
@@ -83,5 +82,6 @@ Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winn
 		}
 	}
 ?>
-
+<div class="clearfix">
+<div id="main">
 <div class="hfeed">
