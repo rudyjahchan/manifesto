@@ -649,7 +649,11 @@ footer nav {
 	margin-bottom: 20px;
 }
 
+#site-info {float: left;}
+#site-feeds {float: right;}
+
 .cclicense {
+margin-top: 10px;
 text-align: center;
 }
 
@@ -673,10 +677,6 @@ text-align: center;
   color: #ccc;
   text-transform: uppercase;
   text-align: center;
-}
-
-.footer-widget-area .widget-container:first-child h3 {
-	border-top: none;
 }
 
 .widget-container h3 a:hover,
