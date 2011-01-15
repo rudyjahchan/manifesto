@@ -38,7 +38,8 @@ a:active{
 header {
 	display:block;
 	height: 240px;
-	background: url(images/RudyJahchanBG.png) right bottom no-repeat;
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	padding-right: 250px;
 }
 
@@ -111,7 +112,7 @@ h5 abbr{
   top: 8px;
 }
 
-#description {
+#site-description {
 	padding: 1em;
 	font-style: italic;
 	font-size: 1.3em;
@@ -120,12 +121,13 @@ h5 abbr{
   color:#888;
   text-align: justify;
 }
-#description:before{
+#site-description p {display: inline;}
+#site-description:before{
 	content:"{";
 	margin-left: -1em;
 	float: left;
 }
-#description:after {
+#site-description:after {
 	content:"}";
 	margin-right: -1em;
 	float: right;

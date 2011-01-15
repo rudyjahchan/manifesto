@@ -7,18 +7,21 @@
 <footer>
 
 <nav id="site">
-	<ul>
 	<?php 
 		if( has_nav_menu('footer_menu') ) {
 			wp_nav_menu(array(
 			'theme_location' => 'footer_menu',
-			'fallback_cb' => false
+			'fallback_cb' => false,
+			'container' => 'none'
 			)); 
 		} else {
-			wp_list_pages("title_li=&depth=1");
+			?>
+			<ul>
+			<?php wp_list_pages("title_li=&depth=1"); ?>
+			</ul>
+			<?php
 		}
 	?>
-	</ul>
 </nav>
 <div class="clearfix">
 			<div id="site-info">
