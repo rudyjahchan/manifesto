@@ -1,6 +1,6 @@
 <div id="comments">
 <?php if ( post_password_required() ) : ?>
-				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'manity' ); ?></p>
+				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'manifesto' ); ?></p>
 			</div><!-- #comments -->
 <?php
 		/* Stop the rest of comments.php from being processed,
