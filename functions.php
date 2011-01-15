@@ -22,6 +22,7 @@ function manifesto_widgets_init() {
 }
 
 function manifesto_register_settings() {
+	register_setting( 'manifesto-settings-group', 'background_header_image' );
 }
 
 function manifesto_add_theme_page() {
@@ -38,8 +39,8 @@ function manifesto_theme_page() {
 			<?php settings_fields( 'manifesto-settings-group' ); ?>
 			<table class="form-table">
 			<tr valign="top">
-				<th scope="row">New Option Name</th>
-				<td><input type="text" name="new_option_name" value="<?php echo get_option('new_option_name'); ?>" /></td>
+				<th scope="row">Background Header Image:</th>
+				<td><input type="text" name="background_header_image" value="<?php echo get_option('background_header_image'); ?>" style="width:100%;" /></td>
 			</tr>
 			</table>
     

@@ -38,7 +38,8 @@ a:active{
 header {
 	display:block;
 	height: 240px;
-	background: url(images/RudyJahchanBG.png) right bottom no-repeat;
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	padding-right: 250px;
 }
 
