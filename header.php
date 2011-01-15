@@ -47,8 +47,17 @@
 <div id="page">
 <header>
 <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-<p id="description">
-Being the website of Rudy Jahchan ; Writer &amp; director of popular, award-winning web shows <a href="http://galacticast.com">GALACTICAST</a> &amp; <a href="">A Comicbook Orange</a> ; Agile codemonkey under the professional auspices of <a href="http://carbonfive.com">Carbon Five</a> ; Crafter of fine WordPress video plugins <a href="http://vlogmonkey.org">VlogMonkey</a> &amp; theme <a href="http://vlogmonkey.org/ufosplode">UFO 'Splode</a> ; Found on <a href="http://twitter.com/rudy">Twitter</a> &amp; <a href="http://facebook.com/rudyjahchan">Facebook</a>.</p>
+<div id="site-description">
+<?php 
+	$rich_description = get_option("rich_description"); 
+	
+	if(!empty($rich_description)) {
+		echo $rich_description;
+	} else {
+		bloginfo('description');
+	}
+?>
+</div>
 </header>
 <nav id="site">
 	<?php 
