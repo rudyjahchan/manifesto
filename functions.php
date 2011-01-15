@@ -21,7 +21,38 @@ function manifesto_widgets_init() {
 
 }
 
+function manifesto_register_settings() {
+}
+
+function manifesto_add_theme_page() {
+	$customize_theme_page = add_theme_page(__('Theme Options'), __('Theme Options'), 'edit_themes', basename(__FILE__), 'manifesto_theme_page');
+	add_action( 'admin_init', 'manifesto_register_settings' );
+}
+
+function manifesto_theme_page() {
+	?>
+	<div class="wrap">
+		<h2>Manifesto Options</h2>
+		
+		<form method="post" action="options.php">
+			<?php settings_fields( 'manifesto-settings-group' ); ?>
+			<table class="form-table">
+			<tr valign="top">
+				<th scope="row">New Option Name</th>
+				<td><input type="text" name="new_option_name" value="<?php echo get_option('new_option_name'); ?>" /></td>
+			</tr>
+			</table>
+    
+    <p class="submit">
+    <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+    </p>
+		</form>
+	</div>
+	<?php
+}
+
 add_action( 'widgets_init', 'manifesto_widgets_init' ); 
 add_action( 'after_setup_theme', 'manifesto_setup' );
+add_action('admin_menu', 'manifesto_add_theme_page');
 
 ?>
