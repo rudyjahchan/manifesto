@@ -6,10 +6,9 @@ Author: Rudy Jahchan
 Version: 1.0 
 Tags: black, white, one-column, fixed-width, custom-header, threaded-comments, microformats, editor-style, custom-menu (optional)
 
-License:
-License URI:
+License: Creative Commons Attribution 2.0 license
+License URI: http://creativecommons.org/licenses/by/2.0/legalcode
 
-General comments (optional).
 */
 html {background: #000;}
 
@@ -340,6 +339,7 @@ nav#sub-pages .current_page_item a:active{
   line-height: 1.3em;
   color: #7D7D7D;
 }
+
 .entry-content .alignleft{
   float: left;
   margin: 4px 10px 10px 0;
@@ -348,6 +348,13 @@ nav#sub-pages .current_page_item a:active{
   float: right;
   margin: 4px 0 10px 10px;
 }
+
+.entry-content .aligncenter {
+	display: block;
+  margin: 4px auto 10px;
+	text-align: center;
+}
+
 .entry-content .wp-caption.alignnone{
   margin-bottom: 15px;
 }
@@ -373,6 +380,8 @@ article {
 
 .author {display: none;}
 
+.entry-content form p {text-align: center;padding: 1em;}
+
 label {
 	font-size: 1.1em;
 	text-transform: uppercase;
@@ -380,7 +389,8 @@ label {
 
 input[type=text],
 textarea,
-select{
+select,
+input[type=password] {
   display: block;
   margin-bottom: 15px;
   width: 100%;
@@ -734,12 +744,6 @@ text-align: center;
 #searchform {
 	text-align: center;
 	margin-top: 1em;
-}
-
-#searchform input[type=text] {
-}
-
-#searchform input[type=submit] {
 }
 
 /* Contact Form */

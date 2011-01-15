@@ -27,7 +27,7 @@
 			<div id="site-info">
 				<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php bloginfo( 'name' ); ?></a>.
-				Designed by <a href="http://rudyjahchan.com">Rudy Jahchan</a>.
+				Designed by <a href="http://rudyjahchan.com">Rudy Jahchan</a> off of <a href="http://jimbarraud.com/manifest/">Jim Barraud's Manifest</a>.
 				<a href="<?php echo esc_url( __('http://wordpress.org/', 'twentyten') ); ?>"
 						title="<?php esc_attr_e('Semantic Personal Publishing Platform', 'twentyten'); ?>" rel="generator">
 					<?php printf( __('Proudly powered by %s', 'twentyten'), 'WordPress' ); ?></a>.
