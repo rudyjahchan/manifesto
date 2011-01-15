@@ -211,6 +211,17 @@ nav#sub-pages li{
   text-transform: uppercase;
   line-height: 1.2em;
 }
+
+nav#sub-pages ul ul{
+	display: inline;
+  padding: 0px;
+}
+nav#sub-pages ul ul li {
+  display: inline;
+  font-size: 1.0em;
+  line-height: 1.0em;
+}
+
 nav#sub-pages li:last-child{
   margin-right: 0;
 }
