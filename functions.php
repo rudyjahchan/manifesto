@@ -37,13 +37,24 @@ function manifesto_header_style() {
     </style><?php
 }
 
-function manifesto_register_settings() {
-	register_setting( 'manifesto-settings-group', 'background_header_image' );
+function manifesto_admin_init() {
+	register_setting( 'manifesto-settings-group', 'rich_description' );
+	wp_register_script("manifesto",get_bloginfo('stylesheet_directory') . "/js/manifesto.js",array("jquery"));
 }
 
 function manifesto_add_theme_page() {
 	$customize_theme_page = add_theme_page(__('Theme Options'), __('Theme Options'), 'edit_themes', basename(__FILE__), 'manifesto_theme_page');
-	add_action( 'admin_init', 'manifesto_register_settings' );
+	add_action('admin_print_scripts-' . $customize_theme_page, 'manifesto_admin_scripts');
+}
+
+function manifesto_admin_scripts() {
+	wp_tiny_mce( false , // true makes the editor "teeny"
+					array(
+						"editor_selector" => "rich_description",
+				                "height" => 150
+					)
+	);
+	wp_enqueue_script( 'manifesto' );
 }
 
 function manifesto_theme_page() {
@@ -55,11 +66,16 @@ function manifesto_theme_page() {
 			<?php settings_fields( 'manifesto-settings-group' ); ?>
 			<table class="form-table">
 			<tr valign="top">
-				<th scope="row">Background Header Image:</th>
-				<td><input type="text" name="background_header_image" value="<?php echo get_option('background_header_image'); ?>" style="width:100%;" /></td>
+				<th scope="row">Rich Description:</th>
+				<td>
+				<p align="right">
+					<a class="button toggleVisual">Visual</a>
+					<a class="button toggleHTML">HTML</a>
+				</p>
+				<textarea id="rich_description" class="rich_description" name="rich_description" style="width:100%;height:150px;"><?php echo htmlspecialchars(get_option('rich_description')); ?></textarea></td>
 			</tr>
 			</table>
-    
+			
     <p class="submit">
     <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
     </p>
@@ -70,6 +86,7 @@ function manifesto_theme_page() {
 
 add_action( 'widgets_init', 'manifesto_widgets_init' ); 
 add_action( 'after_setup_theme', 'manifesto_setup' );
+add_action( 'admin_init', 'manifesto_admin_init' );
 add_action('admin_menu', 'manifesto_add_theme_page');
 
 ?>
