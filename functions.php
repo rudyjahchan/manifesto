@@ -6,6 +6,14 @@ function manifesto_setup() {
 	add_image_size('feature_image_size',500,999);
 	register_nav_menus(array('header_menu' => "Header Menu"));
 	register_nav_menus(array('footer menu' => "Footer Menu"));
+	
+	define('NO_HEADER_TEXT', 'true');
+	define('HEADER_TEXTCOLOR', '');
+	define('HEADER_IMAGE', '%s/images/default_header.jpg'); // %s is the template dir uri
+	define('HEADER_IMAGE_WIDTH', 225); // use width and height appropriate for your theme
+	define('HEADER_IMAGE_HEIGHT', 240);
+	
+	add_custom_image_header( 'manifesto_header_style', 'manifesto_admin_header_style' );
 }
 
 function manifesto_widgets_init() {
@@ -19,6 +27,14 @@ function manifesto_widgets_init() {
 		'after_title' => '</h3>'
 	) );
 
+}
+
+function manifesto_header_style() {
+    ?><style type="text/css">
+        header {
+            background-image: url(<?php header_image(); ?>);
+        }
+    </style><?php
 }
 
 function manifesto_register_settings() {
