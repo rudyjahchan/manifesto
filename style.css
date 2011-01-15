@@ -465,11 +465,12 @@ input[type=submit]:focus{
   border-left: 2px solid #555;
 }
 .hfeed #comments .comment .children li #respond{
-  background: #111 url(images/commentReply.gif) no-repeat;
+  background: #111 no-repeat;
+  border-left: 2px solid #555;
 }
+
 .hfeed #comments .comment .children li .leaveComment{
-  
-  background: url(images/commentBottom.png) repeat-x left bottom;
+  background: repeat-x left bottom;
 }
 .hfeed #comments .comment .children li.depth-3 .comment-body{
   background-color: #111;
@@ -745,7 +746,8 @@ form.contact-form {
 }
 
 /* new clearfix */
-.clearfix:after {
+.clearfix:after,
+#respond:after {
 	visibility: hidden;
 	display: block;
 	font-size: 0;
@@ -753,5 +755,7 @@ form.contact-form {
 	clear: both;
 	height: 0;
 	}
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+* html .clearfix,
+* html #respond             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix,
+*:first-child+html #respond { zoom: 1; } /* IE7 */
