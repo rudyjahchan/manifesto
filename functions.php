@@ -3,6 +3,7 @@
 function manifesto_setup() {
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support('automatic-feed-links');
 	add_image_size('feature_image_size',498,999);
 	register_nav_menus(array('header_menu' => "Header Menu"));
 	register_nav_menus(array('footer menu' => "Footer Menu"));
