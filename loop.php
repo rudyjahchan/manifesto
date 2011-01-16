@@ -35,7 +35,7 @@
 				<div class="entry-utility">
 					<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'manifesto' ), __( '1 Comment', 'manifesto' ), __( '% Comments', 'manifesto' ) ); ?></span>
           <span class="meta-sep">|</span> 
-        	<span class="categories">Filed Under:</span> <?php the_category(', '); ?></span>
+        	<span class="categories">Filed Under: <?php the_category(', '); ?></span>
         	<?php the_tags('<span class="meta-sep">|</span> <span>Tags: ', ' : ', '</span>'); ?>
 					<?php edit_post_link( __( 'Edit', 'manifesto' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>			
 				</div>
@@ -53,7 +53,7 @@
           if(!is_page()) {
 	          ?>
 	          <span class="meta-sep">|</span> 
-	        	<span class="categories">Filed Under:</span> <?php the_category(', '); ?></span>
+	        	<span class="categories">Filed Under: <?php the_category(', '); ?></span>
 	        	<?php 
         		the_tags('<span class="meta-sep">|</span> <span>Tags: ', ' : ', '</span>');
         		edit_post_link( __( 'Edit', 'manifesto' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); 

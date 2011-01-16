@@ -3,7 +3,7 @@
 function manifesto_setup() {
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
-	add_image_size('feature_image_size',500,999);
+	add_image_size('feature_image_size',498,999);
 	register_nav_menus(array('header_menu' => "Header Menu"));
 	register_nav_menus(array('footer menu' => "Footer Menu"));
 	
@@ -29,6 +29,11 @@ function manifesto_widgets_init() {
 
 }
 
+function manifesto_init() {
+	wp_register_script("manifesto",get_bloginfo('stylesheet_directory') . "/js/manifesto.js",array("jquery"));
+	wp_enqueue_script("manifesto");
+}
+
 function manifesto_header_style() {
     ?><style type="text/css">
         header {
@@ -39,7 +44,7 @@ function manifesto_header_style() {
 
 function manifesto_admin_init() {
 	register_setting( 'manifesto-settings-group', 'rich_description' );
-	wp_register_script("manifesto",get_bloginfo('stylesheet_directory') . "/js/manifesto.js",array("jquery"));
+	wp_register_script("manifesto-admin",get_bloginfo('stylesheet_directory') . "/js/manifesto-admin.js",array("jquery"));
 }
 
 function manifesto_add_theme_page() {
@@ -54,7 +59,7 @@ function manifesto_admin_scripts() {
 				                "height" => 150
 					)
 	);
-	wp_enqueue_script( 'manifesto' );
+	wp_enqueue_script( 'manifesto-admin' );
 }
 
 function manifesto_theme_page() {
@@ -88,5 +93,5 @@ add_action( 'widgets_init', 'manifesto_widgets_init' );
 add_action( 'after_setup_theme', 'manifesto_setup' );
 add_action( 'admin_init', 'manifesto_admin_init' );
 add_action('admin_menu', 'manifesto_add_theme_page');
-
+add_action('init', 'manifesto_init');
 ?>
