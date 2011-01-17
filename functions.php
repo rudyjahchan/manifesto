@@ -6,7 +6,7 @@ function manifesto_setup() {
 	add_theme_support('automatic-feed-links');
 	add_image_size('feature_image_size',498,999);
 	register_nav_menus(array('header_menu' => "Header Menu"));
-	register_nav_menus(array('footer menu' => "Footer Menu"));
+	register_nav_menus(array('footer_menu' => "Footer Menu"));
 	
 	define('NO_HEADER_TEXT', 'true');
 	define('HEADER_TEXTCOLOR', '');
