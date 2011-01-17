@@ -153,8 +153,7 @@ nav#site {
 }
 
 nav#site ul{
-  margin: 0 auto;
-  width: 45em;
+  margin: 0 10px;
   text-align: center;
 }
 
