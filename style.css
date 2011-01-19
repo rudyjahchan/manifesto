@@ -291,7 +291,7 @@ nav#sub-pages .current_page_item a:active{
 .entry-content h4,
 .entry-content h5,
 .entry-content h6{
-  color: #333;
+  color: #ccc;
   border: none;
   padding: 0;
   font-family: constantia, palatino, times new roman;
