@@ -439,6 +439,13 @@ input[type=submit]:focus{
   border-color: #666;
 }
 
+section {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.more { float: right;}
+
 /* Comments
 -------------------------------------------------------------------*/
 
