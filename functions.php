@@ -33,6 +33,7 @@ function manifesto_widgets_init() {
 function manifesto_init() {
 	wp_register_script("manifesto",get_bloginfo('stylesheet_directory') . "/js/manifesto.js",array("jquery"));
 	wp_enqueue_script("manifesto");
+	add_post_type_support( 'page', 'excerpt' );
 }
 
 function manifesto_header_style() {
