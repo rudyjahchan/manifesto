@@ -708,6 +708,10 @@ text-align: center;
   text-align: center;
 }
 
+.widget-container:first-child h3 {
+	border-top: none;
+}
+
 .widget-container h3 a:hover,
 .widget-container h3 a:active,
 .widget-container h3 a,
