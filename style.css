@@ -265,13 +265,14 @@ nav#sub-pages .current_page_item a:active{
 .hfeed p{
   text-align: justify;
 }
-.hfeed li{
+.hfeed li li {
   list-style: square;
   margin-left: 17px;
+  font-size: 1.0em;
 }
 .hfeed dt{
   font-size: 1.3em;
-  color: #333;
+  color: #ccc;
 }
 
 .hfeed .entry-utility {
@@ -328,11 +329,18 @@ nav#sub-pages .current_page_item a:active{
 .entry-content ol{
   margin: 0 0 20px 15px;
 }
+.entry-content ul ul,
+.entry-content ol ol{
+  margin: 0 0 0px 15px;
+}
 .entry-content ol li{
   list-style-type: decimal !important;
 }
 .entry-content li{
   margin-bottom: 5px !important;
+}
+.entry-content li li {
+  margin-bottom: 0px !important;
 }
 .entry-content blockquote{
   font-size: 1.4em;
@@ -444,6 +452,46 @@ section {
 }
 
 .more { float: right;}
+
+table {width: 100%;margin-bottom: 20px}
+table td,
+table th {
+	font-size: 1.5em;
+	text-align: center;
+	padding: 10px 20px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+table th {
+	border-bottom: 1px solid #ccc;
+	color: #ccc;
+}
+
+table td.more,
+table th.more {
+	float: none;
+}
+
+table th:first-child,
+table td:first-child {
+	border-left: none;
+}
+
+table th:last-child,
+table td:last-child {
+	border-right: none;
+}
+
+address {
+	font-size: 1.5em;
+	margin: 1em;
+}
+
+.page-links {
+font-size: 1.5em;
+margin: 20px 0 0;
+}
 
 /* Comments
 -------------------------------------------------------------------*/
