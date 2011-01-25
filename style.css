@@ -493,6 +493,12 @@ font-size: 1.5em;
 margin: 20px 0 0;
 }
 
+.gallery-caption {
+	text-align: center;
+	font-size: 0.9em;
+}
+
+
 /* Comments
 -------------------------------------------------------------------*/
 
