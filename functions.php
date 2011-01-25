@@ -1,5 +1,7 @@
 <?php
 
+$content_width = 500;
+
 function manifesto_setup() {
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
