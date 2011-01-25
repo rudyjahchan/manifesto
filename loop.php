@@ -40,13 +40,19 @@
 					<?php edit_post_link( __( 'Edit', 'manifesto' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>			
 				</div>
 			<?php } else { ?>
+          <?php
+          	if(is_single()) {
+          		wp_link_pages('before=<div class="page-links">Pages:&after=</div>'); 
+          	}
+          ?>
+
 				<div class="entry-utility">
           <?php
           $arc_year = get_the_time('Y');
           $arc_month = get_the_time('m');
           $arc_day = get_the_time('d');
           ?>
-        
+          
           <span>Published: <abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><a href="<?php echo get_day_link("$arc_year", "$arc_month", 
           "$arc_day"); ?>"><?php the_time('F j, Y'); ?></a></abbr></span>
           <?php
